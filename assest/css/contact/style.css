@@ -1,8 +1,10 @@
 body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     background-image: url('https://link.storjshare.io/raw/juqrxfnmsvqcn23i4s2vlbricxpa/root/banner/bg-hero.png');
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    inset: 0px;
-    color: transparent;
+    background-size: cover;            
+    background-position: center;       
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
