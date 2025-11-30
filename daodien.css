@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: url("../assets/background-thinkmay.png") center/cover no-repeat fixed;
+    color: #111;
+}
+
+/* Wrapper có viền bo tròn */
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+}
+
+/* Container chính */
+.header-container {
+    width: 950px;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 10px 12px 10px 14px;
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 999;
+}
+
+/* Logo */
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 85px;
+    width: auto;
+}
+
+/* Menu giữa */
+.nav-center {
+    display: flex;
+    gap: 65px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-center a:hover {
+    color: #0E9384;
+    transition: 0.3s;
+}
+
+.nav-center a.active {
+    color: #0E9384;
+}
+
+/* Right side */
+.right-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 60px;
+}
+
+/* Language selector */
+.lang-select {
+    background: #fff;
+    padding: 3px 10px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    user-select: none;
+    position: relative;
+}
+
+.lang-select img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.lang-select .arrow {
+    font-size: 12px;
+    color: #000;
+}
+
+.hidden {
+    display: none;
+}
+
+#lang-menu {
+    position: absolute;
+    top: 45px;
+    width: 220px;
+    background: #fff;
+    border-radius: 16px;
+    list-style: none;
+    padding: 15px 0 12px;
+    margin: 0;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #f1f1f1;
+    z-index: 999;
+}
+
+#lang-menu li {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.15s;
+}
+
+#lang-menu li img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+#lang-menu li:hover:not(.active-lang) {
+    background: #0E9384;
+    border-radius: 12px;
+    margin: 0 12px 8px;
+}
+
+#lang-menu li.active-lang {
+    background: #0E9384;
+    color: #fff;
+    border-radius: 12px;
+    margin: 0 12px 8px;
+}
+
+#lang-menu li.active-lang img {
+    width: 24px;
+    height: 24px;
+}
+
+#lang-menu li:active {
+    opacity: 0.7;
+}
+
+/* Login button */
+.login-btn {
+    background: #0E9384;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.login-btn:hover {
+  background: #10cab7;
+}
+
+/* FAQ HEADER */
+.faq-header {
+    text-align: center;
+    margin: 150px 0 34px;
+
+}
+
+.faq-header h1 {
+    font-size: 46px;
+    margin-bottom: 26px;
+}
+
+/* FAQ SECTION */
+.faq-section {
+    max-width: 850px;
+    width: 90%;
+    margin: auto;
+}
+
+.faq-item {
+    background: white;
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    border: 1px solid #0E9384;
+    position: relative;
+}
+
+.faq-item input {
+    display: none;
+}
+
+.faq-title {
+    font-weight: 200;
+    display: block;
+    cursor: pointer;
+    padding-right: 25px;
+    position: relative;
+}
+
+.faq-title::after {
+    content: "◂";
+    position: absolute;
+    right: 0;
+}
+
+.faq-item input:checked + .faq-title::after {
+    content: "▾";
+}
+
+.faq-content {
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    padding-right: 20px;
+    color: #555;
+}
+
+.faq-item input:checked ~ .faq-content {
+    height: auto;
+    margin-top: 10px;
+}
+
+/* CTA */
+.cta {
+    margin: 60px auto;
+    padding: 80px 40px;
+    width: 1232px;
+    height: 476px;
+    text-align: center;
+    border-radius: 20px;
+    background: #0E9384;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.cta::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.18);
+    filter: blur(120px);
+    top: -100px;
+    left: -100px;
+    border-radius: 50%;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 5;
+}
+
+.cta h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    font-weight: 100;
+}
+
+.cta-btn {
+    height: 52px;
+    width: 367px;
+    background: white;
+    color: black;
+    padding: 18px 45px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #e7e6e6;
+}
+
+.cta-logo {
+    width: 125px;
+    height: auto;
+    margin: 0px 298.4px;
+}
+
+/* FOOTER */
+
+.tm-footer {
+  margin-top: 60px;
+  padding: 40px 24px 32px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  color: #111827;
+}
+
+.tm-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.tm-footer-logo {
+  height: 70px;
+  width: auto;
+  margin-bottom: 12px;
+}
+
+.tm-footer-text {
+  font-size: 14px;
+  color: #4b5563;
+  max-width: 260px;
+}
+
+.tm-footer-col ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.tm-footer-col li + li {
+  margin-top: 6px;
+}
+
+.tm-footer-heading {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tm-footer-col a {
+  font-size: 14px;
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.tm-footer-col a:hover {
+  color: #111827;
+}
+
+/* Dòng copyright dưới cùng */
+.tm-footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 12px;
+  border-top: 1px solid #f3f4f6;
+  font-size: 13px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .tm-footer-inner {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tm-footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .tm-footer {
+    padding-inline: 16px;
+  }
+}
+
+.mail-button img {
+  width: 70px;
+  height: auto;
+  right: 35px;
+  bottom: 25px;
+  position: fixed;
+  z-index: 999; 
+}

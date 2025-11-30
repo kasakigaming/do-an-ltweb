@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+  background: url("../assets/background-thinkmay.png") center/cover no-repeat fixed;
+  color: #111;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+}
+
+/* Container chính */
+.header-container {
+    width: 950px;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 10px 12px 10px 14px;
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 999;
+}
+
+/* Logo */
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 85px;
+    width: auto;
+}
+
+/* Menu giữa */
+.nav-center {
+    display: flex;
+    gap: 65px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-center a:hover {
+    color: #0E9384;
+    transition: 0.3s;
+}
+
+/* Right side */
+.right-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 60px;
+}
+
+/* Language selector */
+.lang-select {
+    background: #fff;
+    padding: 3px 10px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    user-select: none;
+    position: relative;
+}
+
+.lang-select img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.lang-select .arrow {
+    font-size: 12px;
+    color: #000;
+}
+
+.hidden {
+    display: none;
+}
+
+#lang-menu {
+    position: absolute;
+    top: 45px;
+    width: 220px;
+    background: #fff;
+    border-radius: 16px;
+    list-style: none;
+    padding: 15px 0 12px;
+    margin: 0;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #f1f1f1;
+    z-index: 999;
+}
+
+#lang-menu li {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.15s;
+}
+
+#lang-menu li img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+#lang-menu li:hover:not(.active-lang) {
+    background: #0E9384;
+    border-radius: 12px;
+    margin: 0 12px 8px;
+}
+
+#lang-menu li.active-lang {
+    background: #0E9384;
+    color: #fff;
+    border-radius: 12px;
+    margin: 0 12px 8px;
+}
+
+#lang-menu li.active-lang img {
+    width: 24px;
+    height: 24px;
+}
+
+#lang-menu li:active {
+    opacity: 0.7;
+}
+
+/* Login button */
+.login-btn {
+    background: #0E9384;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.login-btn:hover {
+  background: #10cab7;
+}
+
+/* ---------------- TERMS SECTION ---------------- */
+
+.tos-section {
+    max-width: 800px;
+    margin: 130px auto 60px;
+    text-align: center;
+}
+
+
+
+.tos-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #111;
+}
+
+.updated {
+    margin-top: 14px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.tos-content {
+    margin-top: 40px;
+    text-align: left;
+    line-height: 1.7;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.tos-content h2 {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    font-size: 24px;
+    color: #111;
+}
+
+.tos-content p {
+  color: #494949;
+  margin:  10px auto;
+}
+
+.tos-content strong {
+  color: #000;
+}
+
+.tos-content ul {
+  color: #494949;
+  margin: 10px auto 10px 30px;
+}
+
+.tos-content a{
+  text-decoration: none;
+  color: #0E9384;
+}
+
+.tos-content a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+
+.tm-footer {
+  margin-top: 60px;
+  padding: 40px 24px 32px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  color: #111827;
+}
+
+.tm-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.tm-footer-logo {
+  height: 70px;
+  width: auto;
+  margin-bottom: 12px;
+}
+
+.tm-footer-text {
+  font-size: 14px;
+  color: #4b5563;
+  max-width: 260px;
+}
+
+.tm-footer-col ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.tm-footer-col li + li {
+  margin-top: 6px;
+}
+
+.tm-footer-heading {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tm-footer-col a {
+  font-size: 14px;
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.tm-footer-col a:hover {
+  color: #111827;
+}
+
+/* Dòng copyright dưới cùng */
+.tm-footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 12px;
+  border-top: 1px solid #f3f4f6;
+  font-size: 13px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .tm-footer-inner {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tm-footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .tm-footer {
+    padding-inline: 16px;
+  }
+}
+
+.mail-button img {
+  width: 70px;
+  height: auto;
+  right: 35px;
+  bottom: 25px;
+  position: fixed;
+  z-index: 999; 
+}
