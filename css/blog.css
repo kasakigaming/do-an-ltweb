@@ -1,0 +1,470 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  background-image: url("https://link.storjshare.io/raw/juqrxfnmsvqcn23i4s2vlbricxpa/root/banner/bg-hero.png");
+  background-size: cover; /* ảnh phủ kín */
+  background-repeat: no-repeat; /* không lặp */
+  background-attachment: fixed; /* cố định khi scroll (hiệu ứng parallax nhẹ) */
+  background-position: center; /* căn giữa ảnh */
+}
+
+/* Navbar container */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 16px 24px;
+  background: transparent;
+}
+
+/* Thanh mờ mờ bo tròn */
+.navbar-inner {
+  max-width: 950px;
+  max-height: 65px;
+  margin: 0 auto;
+  padding: 8px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff80;
+  border-radius: 10px;
+  box-shadow: 0 18px 45px rgba(15, 76, 92, 0.12);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 100%;
+  width: 80px;
+}
+
+.navbar-menu ul {
+  list-style: none;
+  display: flex;
+  white-space: nowrap;
+  gap: 75px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.nav-item.active a {
+  color: #0e9384;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #111827;
+  font-size: 15px;
+}
+
+/* Hamburger icon – mặc định ẩn (desktop) */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 8px; /* bo góc giống Thinkmay */
+  border: 2px solid #dfe0e3; /* VIỀN */
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 18px;
+  height: 2px;
+  background: #6a7282;
+  border-radius: 999px;
+}
+
+/* Hover */
+.navbar-menu a:hover {
+  color: #0e9384;
+}
+
+/* Khu vực bên phải */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 100px;
+}
+
+/* Nút chọn ngôn ngữ */
+.language-selector {
+  position: relative;
+}
+
+.language-flag {
+  height: 22px;
+  width: 22px;
+  border-radius: 100%;
+}
+
+.language-current {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Dropdown */
+.language-dropdown {
+  position: absolute;
+  right: -158px;
+  margin-top: 20px;
+  min-width: 220px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.language-selector.is-open .language-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Mũi tên mặc định hướng xuống */
+.language-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Khi .is-open được bật → xoay mũi tên lên */
+.language-selector.is-open .language-arrow {
+  transform: rotate(180deg);
+}
+
+.language-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 10px;
+}
+
+.language-item button {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  border-radius: 11px;
+  cursor: pointer;
+  color: #111827; /* thêm */
+  transition: 0.2s ease; /* thêm */
+}
+
+.language-item {
+  margin-bottom: 7px;
+}
+
+.language-item:last-child {
+  margin-bottom: 0;
+}
+
+.language-item--active button {
+  background: #0e9384;
+  color: #fff !important;
+}
+
+/* Hover: block xanh + chữ trắng */
+.language-item:hover button {
+  background: #0e9384;
+  color: #fff;
+}
+
+/* Tên ngôn ngữ trắng luôn khi hover */
+.language-item:hover .language-name {
+  color: #fff;
+}
+
+/* Nút đăng ký */
+.btn-register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #0e9384;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.btn-register:hover {
+  opacity: 0.9;
+}
+
+/* ====== Layout tổng cho trang blog ====== */
+
+.blog-page {
+  padding: 40px 16px 80px;
+}
+
+/* Tiêu đề + mô tả */
+.blog-hero {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 44px;
+  font-weight: 657;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.blog-subtitle {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* ====== Khối card bài viết ====== */
+
+.blog-section {
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+/* Card lớn (feature) */
+.blog-card.feature-post {
+  background: #ffffff80;
+  border-radius: 24px;
+  box-shadow: 0 22px 60px rgba(15, 76, 92, 0.15);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+  gap: 28px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+}
+
+/* Ảnh bài viết */
+.blog-card-thumb {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.blog-card-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Nội dung bài viết */
+.blog-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-category {
+  font-size: 13px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+.blog-post-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.blog-meta {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.blog-author {
+  font-weight: 600;
+}
+
+.blog-dot {
+  padding: 0 6px;
+}
+
+.blog-excerpt {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.blog-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #10b981;
+  text-decoration: none;
+}
+
+.blog-readmore-icon {
+  font-size: 14px;
+}
+
+/* ====== Card nhỏ phía dưới ====== */
+
+.blog-card.small-post {
+  background: #ffffff80;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(15, 76, 92, 0.12);
+  padding: 18px 20px;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.small-thumb {
+  max-height: 140px;
+}
+
+.small-title {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.small-excerpt {
+  margin-bottom: 10px;
+}
+
+/* ========= FOOTER ========= */
+
+.footer {
+  margin-top: 60px;
+  padding: 40px 24px 28px;
+  background: #fbfafa;
+  color: #111827;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.footer-logo {
+  height: 32px;
+  margin-bottom: 16px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 12px;
+  max-width: 280px;
+}
+
+.footer-address {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.footer-col ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.footer-col li + li {
+  margin-top: 6px;
+}
+
+.footer-heading {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #111827;
+}
+
+.footer-col a {
+  font-size: 14px;
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: #111827;
+}
+
+/* đường kẻ mỏng phía trên copyright */
+.footer-divider {
+  max-width: 1100px;
+  margin: 0 auto 12px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* ========== NAVBAR MOBILE MENU ========== */
+
+.navbar-menu-mobile {
+  position: absolute;
+  top: 78px;
+  left: 24px;
+  right: 24px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(15, 76, 92, 0.16);
+  padding: 20px 24px;
+  display: none;
+  z-index: 90;
+}
+
+.navbar-menu-mobile ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu-mobile li + li {
+  margin-top: 22px;
+}
+
+.navbar-menu-mobile a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #111827;
+}
+
+.navbar-menu-mobile.is-open {
+  display: block;
+}

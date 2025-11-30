@@ -1,0 +1,119 @@
+/* <= 1000px */
+@media (max-width: 1000px) {
+  .navbar-inner {
+    max-width: 950px;
+    max-height: 65px;
+    position: relative;
+    padding: 10px 16px;
+  }
+
+  /* HIỆN HAMBURGER */
+  .navbar-toggle {
+    display: flex;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* LOGO Ở GIỮA */
+  .navbar-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .navbar-logo img {
+    height: 42px;
+  }
+
+  /* NGÔN NGỮ CHẠY SANG BÊN TRÁI, NGAY SAU HAMBURGER */
+  .language-selector {
+    position: absolute;
+    left: 52px; /* chỉnh khoảng cách với hamburger ở đây */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* ẨN MENU CHỮ TRÊN MOBILE */
+  .navbar-menu {
+    display: none;
+  }
+
+  /* ĐĂNG KÝ NẰM BÊN PHẢI */
+  .navbar-actions {
+    margin-left: auto;
+    gap: 10px;
+  }
+
+  .language-current {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .language-dropdown {
+    right: auto; /* vì đã position absolute trái */
+    left: 52px;
+    width: 180px;
+  }
+
+  .language-item button {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .btn-register {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+}
+
+/* <= 900px */
+@media (max-width: 900px) {
+  /* TẤT CẢ BLOG CARD CHUYỂN VỀ 1 CỘT */
+  .blog-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Giới hạn chiều cao ảnh */
+  .blog-card-thumb {
+    max-height: 260px;
+  }
+
+  .blog-card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Footer: chuyển xuống 2 cột */
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+  }
+}
+
+/* <= 600px */
+@media (max-width: 600px) {
+  .blog-page {
+    padding-inline: 12px;
+  }
+
+  .blog-card {
+    padding: 18px 16px;
+  }
+
+  .blog-post-title {
+    font-size: 18px;
+  }
+
+  /* Footer: xuống 1 cột */
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding-inline: 16px;
+  }
+}
