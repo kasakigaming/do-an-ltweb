@@ -55,7 +55,7 @@ a {
   font-weight: 600;
   text-align: center;
   color: var(--foreground--color);
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .desc {
@@ -157,20 +157,21 @@ a {
 
 .main__bg--img {
   width: 100%;
-  height: 100%;
+  height: 70vh;
   object-fit: cover;
 }
 
 /* ======================= main ========================== */
 .price {
   display: flex;
-  align-items: center;
   gap: 30px;
+  font-size: 3rem;
+  color: var(--primary--color);
 }
 
 .price__banner {
   width: 380px;
-  height: 868px;
+  height: 100%;
   background-color: #fff;
   border-radius: 0.75rem 0.75rem 0 0;
 }
@@ -203,18 +204,37 @@ a {
 }
 .price__detail {
   padding: 30px;
+  border: 2px solid var(--primary--color);
+  border-radius: 0 0 0.75rem 0.75rem;
 }
 
 .price__logo {
-  width: 60px;
-  height: 50px;
+  width: 70px;
+  height: 65px;
   background: linear-gradient(
     139.65deg,
     rgba(115, 194, 158, 0.9) 7.94%,
     rgba(58, 112, 90, 0.9) 95.55%
   );
-  box-shadow: rgba(90, 158, 129, 0.6) 0px 0px 11.33px 0px;
+  box-shadow: rgba(90, 158, 129, 0.6) 0px 0px 17px 0px;
   border-radius: 0.75rem;
+}
+
+.price__logo01 {
+  background-image: linear-gradient(
+    139.65deg,
+    #32bedae6 7.94%,
+    #1379b1e6 95.55%
+  );
+  box-shadow: #1a81ad99 0px 0px 17px 0px;
+}
+.price__logo02 {
+  background-image: linear-gradient(
+    139.65deg,
+    #f7b532e6 7.94%,
+    #a2471ae6 95.55%
+  );
+  box-shadow: #cc8e2b99 0px 0px 17px 0px;
 }
 
 .price__logo--detail {
@@ -226,12 +246,13 @@ a {
   gap: var(--spacing);
 }
 .price__logo img {
-  width: 36px;
-  height: 19px;
+  width: 50px;
+  height: 30px;
 }
 
 .price__logo span {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--background--color);
 }
 
@@ -240,9 +261,27 @@ a {
   font-size: 1.8rem;
 }
 
-.price {
-  font-size: 3rem;
-  color: var(--primary--color);
+.price__sales {
+  display: flex;
+  align-items: flex-end;
+  gap: calc(var(--spacing) * 4);
+}
+
+.price__before {
+  text-decoration: line-through;
+  color: #a6a9a9;
+  line-height: 1;
+}
+
+.price__current {
+  line-height: 1;
+}
+
+.price__time {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 1;
 }
 
 .price__info {
@@ -263,6 +302,75 @@ a {
   font-size: 1.6rem;
 }
 
+.price__content--gray {
+  color: #6a7282;
+}
+
 .price__detail ul {
   margin-top: 15px;
+}
+
+.price__item {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 3);
+  margin-bottom: 15px;
+}
+/* ============================= main banner ================================== */
+.banner__cta {
+  position: relative;
+}
+.banner__light--left {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: 242px;
+  z-index: 1;
+}
+
+.banner__light--right {
+  position: absolute;
+  height: 100%;
+  bottom: 0px;
+  right: 242px;
+  rotate: 180deg;
+  z-index: 1;
+}
+
+.main__banner {
+  margin-top: 100px;
+  width: 100%;
+  height: 400px;
+  background-color: var(--primary--color);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.banner__heading {
+  color: var(--background--color);
+}
+
+.banner__desc {
+  color: var(--background--color);
+  font-weight: 300;
+}
+
+.banner__btn {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 3);
+  margin-top: 20px;
+  font-weight: 500;
+  color: var(--foreground--color);
+  background-color: var(--background--color);
+  padding: 15px 80px;
+}
+
+.banner__btn:hover {
+  background-color: #f0f0f0;
+  animation: ease-out 0.3s;
 }
