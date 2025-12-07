@@ -18,7 +18,7 @@
                 <a href="#">Giá cả</a>
                 <a href="#">FAQ</a>
                 <a href="#">Blog</a>
-                <a href="#">Liên hệ</a>
+                <a href="/">Liên hệ</a>
             </div>
             <div class="mobile-controls">
                 <div class="hamburger" id="hamburger">
@@ -26,8 +26,24 @@
                     <span></span>
                     <span></span>
                 </div>
-                <div class="btn-language">
-                    <img src="https://thinkmay.net/images/logo/vietnam.png" width="20" alt="VN">VN
+                <div class="language-wrapper">
+                    <button class="btn-language" id="langToggleMobile">
+                        <img src="https://thinkmay.net/images/logo/vietnam.png" width="20" alt="">
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown" id="langDropdownMobile">
+                        <button class="lang-item" data-link="#">
+                            <img src="https://thinkmay.net/images/logo/vietnam.png" alt="en" width="20">
+                            <span>Tiếng Việt</span>
+                        </button>
+
+                        <button class="lang-item" data-link="contact-en.html">
+                            <img src="./assest/img/england.png" alt="en" width="20">
+                            <span>English</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -43,11 +59,27 @@
             </ul>
 
             <div class="controls">
-                <div class="btn-language">
-                    <img src="https://thinkmay.net/images/logo/vietnam.png" width="20" alt="VN">VN
-                </div>
+                <div class="language-wrapper">
+                    <button class="btn-language" id="langToggleDesktop">
+                        <img src="https://thinkmay.net/images/logo/vietnam.png" width="20" alt="">
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown" id="langDropdownDesktop">
+                        <button class="lang-item" data-link="#">
+                            <img src="https://thinkmay.net/images/logo/vietnam.png" alt="en" width="20">
+                            <span>Tiếng Việt</span>
+                        </button>
+
+                        <button class="lang-item" data-link="contact-en.html">
+                            <img src="./assest/img/england.png" alt="en" width="20">
+                            <span>English</span> 
+                        </button>               
+                    </div>
+                </div> 
                 <a href="#" class="btn-register" style="text-align: center;">Đăng kí</a>
-            </div>    
+            </div>   
         </nav>
     </header>
     <main class="relative pt-36 lg:pt-32">
@@ -184,7 +216,7 @@
                 © 2021–2025 Thinkmay. Đã đăng ký bản quyền
             </span>
         </div>
-        
+
     </footer>
 </body>
 </html>
