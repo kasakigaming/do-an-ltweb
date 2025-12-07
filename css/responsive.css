@@ -4,7 +4,7 @@
     max-width: 950px;
     max-height: 65px;
     position: relative;
-    padding: 10px 16px;
+    padding: 15px 16px;
   }
 
   /* HIỆN HAMBURGER */
@@ -39,6 +39,10 @@
   /* ẨN MENU CHỮ TRÊN MOBILE */
   .navbar-menu {
     display: none;
+  }
+
+  .navbar-menu-mobile a:hover {
+    color: #0e9384;
   }
 
   /* ĐĂNG KÝ NẰM BÊN PHẢI */

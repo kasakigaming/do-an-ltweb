@@ -64,12 +64,12 @@ body {
 
 /* Hamburger icon – mặc định ẩn (desktop) */
 .navbar-toggle {
+  all: unset;
   display: none;
   flex-direction: column;
   gap: 4px;
   padding: 6px;
-  border-radius: 8px; /* bo góc giống Thinkmay */
-  border: 2px solid #dfe0e3; /* VIỀN */
+  border-radius: 8px;
   background: transparent;
   cursor: pointer;
 }
@@ -270,9 +270,11 @@ body {
 
 .blog-card-thumb img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
 
 /* Nội dung bài viết */
@@ -363,7 +365,7 @@ body {
 .footer {
   margin-top: 60px;
   padding: 40px 24px 28px;
-  background: #fbfafa;
+  background: #ffffff81;
   color: #111827;
 }
 
