@@ -84,6 +84,7 @@
       <section>
         <div class="container">
           <div class="price">
+            <!-- price banner 01 -->
             <div class="price__banner">
               <div class="price__top">
                 <img src="./assets/img/star.png" alt="" class="price__star" />
@@ -97,16 +98,20 @@
                       <span>Trải Nghiệm</span>
                     </div>
                   </div>
-                  <h2 class="heading price__title--heading">Trải Nghiệm</h2>
+                  <h3 class="heading price__title--heading">Trải Nghiệm</h3>
                 </div>
-                <span class="heading price">59K</span>
+                <div class="price__sales">
+                  <span class="heading price price__before">59K</span>
+                  <span class="heading price price__current">29K</span>
+                  <span class="heading price__time">/ 1h</span>
+                </div>
                 <p class="desc price__info">
                   Gói trải nghiệm giới hạn 5 giờ chơi, không giới hạn ngày. Chỉ
                   có thể gia hạn sang các gói khác
                 </p>
                 <a href="#" class="btn price__btn">Thanh toán</a>
                 <ul>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -121,7 +126,7 @@
                     >
                       <path d="M2 21V3"></path>
                       <path
-                        d="M2 5h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2.26"
+                        d="M2 5h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h3.26"
                       ></path>
                       <path d="M7 17v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3"></path>
                       <circle cx="16" cy="11" r="2"></circle>
@@ -130,7 +135,7 @@
                       >GPU : RTX 3060Ti 8GB RAM</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -141,19 +146,18 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-cpu"
                       aria-hidden="true"
                     >
                       <path d="M12 20v2"></path>
                       <path d="M12 2v2"></path>
                       <path d="M17 20v2"></path>
                       <path d="M17 2v2"></path>
-                      <path d="M2 12h2"></path>
-                      <path d="M2 17h2"></path>
-                      <path d="M2 7h2"></path>
-                      <path d="M20 12h2"></path>
-                      <path d="M20 17h2"></path>
-                      <path d="M20 7h2"></path>
+                      <path d="M2 12h3"></path>
+                      <path d="M2 17h3"></path>
+                      <path d="M2 7h3"></path>
+                      <path d="M20 12h3"></path>
+                      <path d="M20 17h3"></path>
+                      <path d="M20 7h3"></path>
                       <path d="M7 20v2"></path>
                       <path d="M7 2v2"></path>
                       <rect x="4" y="4" width="16" height="16" rx="2"></rect>
@@ -162,7 +166,7 @@
                       >CPU : Xeon 8171M 6 Cores</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -173,7 +177,6 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-memory-stick"
                       aria-hidden="true"
                     >
                       <path d="M6 19v-3"></path>
@@ -183,13 +186,13 @@
                       <path d="M8 11V9"></path>
                       <path d="M16 11V9"></path>
                       <path d="M12 11V9"></path>
-                      <path d="M2 15h20"></path>
+                      <path d="M2 15h30"></path>
                       <path
                         d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"
                       ></path></svg
                     ><span class="heading price__content">RAM : 16GB DDR4</span>
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -200,7 +203,6 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-hard-drive"
                       aria-hidden="true"
                     >
                       <line x1="22" x2="2" y1="12" y2="12"></line>
@@ -209,176 +211,69 @@
                       ></path>
                       <line x1="6" x2="6.01" y1="16" y2="16"></line>
                       <line x1="10" x2="10.01" y1="16" y2="16"></line></svg
-                    ><span class="heading price__content"
-                      >Dung lượng lưu trữ máy ảo</span
+                    ><span class="heading price__content price__content--gray"
+                      >Không lưu dữ liệu</span
                     >
                   </li>
-                  <li>
+
+                  <li class="price__item">
+                    <img
+                      alt="time"
+                      loading="lazy"
+                      width="18"
+                      height="18"
+                      decoding="async"
+                      data-nimg="1"
+                      class="h-4"
+                      src="./assets/img/time.png"
+                      style="color: transparent"
+                    /><span class="heading price__content"
+                      >Giới hạn 3 giờ sử dụng</span
+                    >
+                  </li>
+
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="19"
+                      height="19"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="#000000"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-hard-drive"
                       aria-hidden="true"
                     >
-                      <line x1="22" x2="2" y1="12" y2="12"></line>
-                      <path
-                        d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
-                      ></path>
-                      <line x1="6" x2="6.01" y1="16" y2="16"></line>
-                      <line x1="10" x2="10.01" y1="16" y2="16"></line></svg
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path></svg
                     ><span class="heading price__content"
-                      >Không thể mở rộng</span
-                    >
-                  </li>
-                  <li>
-                    <img
-                      alt="time"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      decoding="async"
-                      data-nimg="1"
-                      class="h-4"
-                      src="./assets/img/time.png"
-                      style="color: transparent"
-                    /><span class="heading price__content"
-                      >Có giá trị vĩnh viễn</span
-                    >
-                  </li>
-                  <li>
-                    <img
-                      alt="time"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      decoding="async"
-                      data-nimg="1"
-                      class="h-4"
-                      src="./assets/img/time.png"
-                      style="color: transparent"
-                    /><span class="heading price__content"
-                      >Giới hạn 5 giờ sử dụng</span
-                    >
-                  </li>
-                  <li>
-                    <img
-                      alt="session"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      decoding="async"
-                      data-nimg="1"
-                      class="h-4"
-                      src="./assets/img/session.png"
-                      style="color: transparent"
-                    /><span class="heading price__content"
                       >Giới hạn 3 giờ/phiên</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="#000000"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big text-black size-[20px]"
-                      aria-hidden="true"
-                    >
-                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                      <path d="m9 11 3 3L22 4"></path></svg
-                    ><span class="heading price__content">Hạ tầng ổn định</span>
-                  </li>
-                  <li>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#000000"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big text-black size-[20px]"
-                      aria-hidden="true"
-                    >
-                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                      <path d="m9 11 3 3L22 4"></path></svg
-                    ><span class="heading price__content">Không xếp hàng</span>
-                  </li>
-                  <li>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#000000"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big text-black size-[20px]"
-                      aria-hidden="true"
-                    >
-                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                      <path d="m9 11 3 3L22 4"></path></svg
-                    ><span class="heading price__content">Ưu tiên phục vụ</span>
-                  </li>
-                  <li>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#000000"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-x text-black size-[20px]"
                       aria-hidden="true"
                     >
                       <path d="M18 6 6 18"></path>
                       <path d="m6 6 12 12"></path></svg
                     ><span class="heading price__content"
                       >Không hỗ trợ treo máy</span
-                    >
-                  </li>
-                  <li>
-                    <span class="heading price__content"
-                      >Dành riêng cho người dùng mới</span
-                    >
-                  </li>
-                  <li>
-                    <img
-                      alt="storage"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      decoding="async"
-                      data-nimg="1"
-                      src="./assets/img/storage.png"
-                      style="color: transparent"
-                    />
-                    <span class="heading price__content"
-                      >Dành riêng cho người dùng mới</span
                     >
                   </li>
                 </ul>
               </div>
             </div>
+            <!-- price banner 02 -->
             <div class="price__banner">
               <div class="price__top">
                 <img src="./assets/img/star.png" alt="" class="price__star" />
@@ -386,22 +281,26 @@
               </div>
               <div class="price__detail">
                 <div class="price__heading">
-                  <div class="price__logo">
+                  <div class="price__logo price__logo01">
                     <div class="price__logo--detail">
                       <img src="./assets/img/logo_black_white.png" alt="" />
-                      <span>Trải Nghiệm</span>
+                      <span>Tiêu chuẩn</span>
                     </div>
                   </div>
-                  <h2 class="heading price__title--heading">Trải Nghiệm</h2>
+                  <h3 class="heading price__title--heading">Tiêu chuẩn</h3>
                 </div>
-                <span class="heading price">59K</span>
+                <div class="price__sales">
+                  <span class="heading price price__before">349K</span>
+                  <span class="heading price price__current">299K</span>
+                  <span class="heading price__time">/ tháng</span>
+                </div>
                 <p class="desc price__info">
                   Gói trải nghiệm giới hạn 5 giờ chơi, không giới hạn ngày. Chỉ
                   có thể gia hạn sang các gói khác
                 </p>
                 <a href="#" class="btn price__btn">Thanh toán</a>
                 <ul>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -416,7 +315,7 @@
                     >
                       <path d="M2 21V3"></path>
                       <path
-                        d="M2 5h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2.26"
+                        d="M2 5h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h3.26"
                       ></path>
                       <path d="M7 17v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3"></path>
                       <circle cx="16" cy="11" r="2"></circle>
@@ -425,7 +324,7 @@
                       >GPU : RTX 3060Ti 8GB RAM</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -436,19 +335,18 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-cpu"
                       aria-hidden="true"
                     >
                       <path d="M12 20v2"></path>
                       <path d="M12 2v2"></path>
                       <path d="M17 20v2"></path>
                       <path d="M17 2v2"></path>
-                      <path d="M2 12h2"></path>
-                      <path d="M2 17h2"></path>
-                      <path d="M2 7h2"></path>
-                      <path d="M20 12h2"></path>
-                      <path d="M20 17h2"></path>
-                      <path d="M20 7h2"></path>
+                      <path d="M2 12h3"></path>
+                      <path d="M2 17h3"></path>
+                      <path d="M2 7h3"></path>
+                      <path d="M20 12h3"></path>
+                      <path d="M20 17h3"></path>
+                      <path d="M20 7h3"></path>
                       <path d="M7 20v2"></path>
                       <path d="M7 2v2"></path>
                       <rect x="4" y="4" width="16" height="16" rx="2"></rect>
@@ -457,7 +355,7 @@
                       >CPU : Xeon 8171M 6 Cores</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -468,7 +366,6 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-memory-stick"
                       aria-hidden="true"
                     >
                       <path d="M6 19v-3"></path>
@@ -478,13 +375,13 @@
                       <path d="M8 11V9"></path>
                       <path d="M16 11V9"></path>
                       <path d="M12 11V9"></path>
-                      <path d="M2 15h20"></path>
+                      <path d="M2 15h30"></path>
                       <path
                         d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"
                       ></path></svg
                     ><span class="heading price__content">RAM : 16GB DDR4</span>
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -495,7 +392,6 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-hard-drive"
                       aria-hidden="true"
                     >
                       <line x1="22" x2="2" y1="12" y2="12"></line>
@@ -505,10 +401,10 @@
                       <line x1="6" x2="6.01" y1="16" y2="16"></line>
                       <line x1="10" x2="10.01" y1="16" y2="16"></line></svg
                     ><span class="heading price__content"
-                      >Dung lượng lưu trữ máy ảo</span
+                      >Miễn phí 200GB đầu</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -519,7 +415,6 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-hard-drive"
                       aria-hidden="true"
                     >
                       <line x1="22" x2="2" y1="12" y2="12"></line>
@@ -529,45 +424,31 @@
                       <line x1="6" x2="6.01" y1="16" y2="16"></line>
                       <line x1="10" x2="10.01" y1="16" y2="16"></line></svg
                     ><span class="heading price__content"
-                      >Không thể mở rộng</span
+                      >Ngoài 200G đầu, phí 1.000đ/GB</span
                     >
                   </li>
-                  <li>
+
+                  <li class="price__item">
                     <img
                       alt="time"
                       loading="lazy"
-                      width="16"
-                      height="16"
+                      width="19"
+                      height="19"
                       decoding="async"
                       data-nimg="1"
                       class="h-4"
                       src="./assets/img/time.png"
                       style="color: transparent"
                     /><span class="heading price__content"
-                      >Có giá trị vĩnh viễn</span
+                      >Giới hạn 120 giờ sử dụng</span
                     >
                   </li>
-                  <li>
-                    <img
-                      alt="time"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      decoding="async"
-                      data-nimg="1"
-                      class="h-4"
-                      src="./assets/img/time.png"
-                      style="color: transparent"
-                    /><span class="heading price__content"
-                      >Giới hạn 5 giờ sử dụng</span
-                    >
-                  </li>
-                  <li>
+                  <li class="price__item">
                     <img
                       alt="session"
                       loading="lazy"
-                      width="16"
-                      height="16"
+                      width="19"
+                      height="19"
                       decoding="async"
                       data-nimg="1"
                       class="h-4"
@@ -577,103 +458,63 @@
                       >Giới hạn 3 giờ/phiên</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="#000000"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big text-black size-[20px]"
                       aria-hidden="true"
                     >
                       <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                       <path d="m9 11 3 3L22 4"></path></svg
                     ><span class="heading price__content">Hạ tầng ổn định</span>
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="#000000"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big text-black size-[20px]"
                       aria-hidden="true"
                     >
                       <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                       <path d="m9 11 3 3L22 4"></path></svg
                     ><span class="heading price__content">Không xếp hàng</span>
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="#000000"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big text-black size-[20px]"
-                      aria-hidden="true"
-                    >
-                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                      <path d="m9 11 3 3L22 4"></path></svg
-                    ><span class="heading price__content">Ưu tiên phục vụ</span>
-                  </li>
-                  <li>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#000000"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-x text-black size-[20px]"
                       aria-hidden="true"
                     >
                       <path d="M18 6 6 18"></path>
                       <path d="m6 6 12 12"></path></svg
                     ><span class="heading price__content"
                       >Không hỗ trợ treo máy</span
-                    >
-                  </li>
-                  <li>
-                    <span class="heading price__content"
-                      >Dành riêng cho người dùng mới</span
-                    >
-                  </li>
-                  <li>
-                    <img
-                      alt="storage"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      decoding="async"
-                      data-nimg="1"
-                      src="./assets/img/storage.png"
-                      style="color: transparent"
-                    />
-                    <span class="heading price__content"
-                      >Dành riêng cho người dùng mới</span
                     >
                   </li>
                 </ul>
               </div>
             </div>
+            <!-- price banner 03 -->
             <div class="price__banner">
               <div class="price__top">
                 <img src="./assets/img/star.png" alt="" class="price__star" />
@@ -681,22 +522,26 @@
               </div>
               <div class="price__detail">
                 <div class="price__heading">
-                  <div class="price__logo">
+                  <div class="price__logo price__logo02">
                     <div class="price__logo--detail">
                       <img src="./assets/img/logo_black_white.png" alt="" />
-                      <span>Trải Nghiệm</span>
+                      <span>Hiệu năng</span>
                     </div>
                   </div>
-                  <h2 class="heading price__title--heading">Trải Nghiệm</h2>
+                  <h3 class="heading price__title--heading">Hiệu Năng</h3>
                 </div>
-                <span class="heading price">59K</span>
+                <div class="price__sales">
+                  <span class="heading price price__before">599K</span>
+                  <span class="heading price price__current">499K</span>
+                  <span class="heading price__time">/ tháng</span>
+                </div>
                 <p class="desc price__info">
                   Gói trải nghiệm giới hạn 5 giờ chơi, không giới hạn ngày. Chỉ
                   có thể gia hạn sang các gói khác
                 </p>
                 <a href="#" class="btn price__btn">Thanh toán</a>
                 <ul>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -711,7 +556,7 @@
                     >
                       <path d="M2 21V3"></path>
                       <path
-                        d="M2 5h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2.26"
+                        d="M2 5h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h3.26"
                       ></path>
                       <path d="M7 17v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3"></path>
                       <circle cx="16" cy="11" r="2"></circle>
@@ -720,7 +565,7 @@
                       >GPU : RTX 3060Ti 8GB RAM</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -731,19 +576,18 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-cpu"
                       aria-hidden="true"
                     >
                       <path d="M12 20v2"></path>
                       <path d="M12 2v2"></path>
                       <path d="M17 20v2"></path>
                       <path d="M17 2v2"></path>
-                      <path d="M2 12h2"></path>
-                      <path d="M2 17h2"></path>
-                      <path d="M2 7h2"></path>
-                      <path d="M20 12h2"></path>
-                      <path d="M20 17h2"></path>
-                      <path d="M20 7h2"></path>
+                      <path d="M2 12h3"></path>
+                      <path d="M2 17h3"></path>
+                      <path d="M2 7h3"></path>
+                      <path d="M20 12h3"></path>
+                      <path d="M20 17h3"></path>
+                      <path d="M20 7h3"></path>
                       <path d="M7 20v2"></path>
                       <path d="M7 2v2"></path>
                       <rect x="4" y="4" width="16" height="16" rx="2"></rect>
@@ -752,7 +596,7 @@
                       >CPU : Xeon 8171M 6 Cores</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -763,7 +607,6 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-memory-stick"
                       aria-hidden="true"
                     >
                       <path d="M6 19v-3"></path>
@@ -773,13 +616,13 @@
                       <path d="M8 11V9"></path>
                       <path d="M16 11V9"></path>
                       <path d="M12 11V9"></path>
-                      <path d="M2 15h20"></path>
+                      <path d="M2 15h30"></path>
                       <path
                         d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"
                       ></path></svg
                     ><span class="heading price__content">RAM : 16GB DDR4</span>
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -790,7 +633,6 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-hard-drive"
                       aria-hidden="true"
                     >
                       <line x1="22" x2="2" y1="12" y2="12"></line>
@@ -800,10 +642,10 @@
                       <line x1="6" x2="6.01" y1="16" y2="16"></line>
                       <line x1="10" x2="10.01" y1="16" y2="16"></line></svg
                     ><span class="heading price__content"
-                      >Dung lượng lưu trữ máy ảo</span
+                      >Miễn phí 200GB đầu</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -814,7 +656,6 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-hard-drive"
                       aria-hidden="true"
                     >
                       <line x1="22" x2="2" y1="12" y2="12"></line>
@@ -824,152 +665,128 @@
                       <line x1="6" x2="6.01" y1="16" y2="16"></line>
                       <line x1="10" x2="10.01" y1="16" y2="16"></line></svg
                     ><span class="heading price__content"
-                      >Không thể mở rộng</span
+                      >Ngoài 400GB đầu, phí 1.000đ/GB</span
                     >
                   </li>
-                  <li>
-                    <img
-                      alt="time"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      decoding="async"
-                      data-nimg="1"
-                      class="h-4"
-                      src="./assets/img/time.png"
-                      style="color: transparent"
-                    /><span class="heading price__content"
-                      >Có giá trị vĩnh viễn</span
-                    >
-                  </li>
-                  <li>
-                    <img
-                      alt="time"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      decoding="async"
-                      data-nimg="1"
-                      class="h-4"
-                      src="./assets/img/time.png"
-                      style="color: transparent"
-                    /><span class="heading price__content"
-                      >Giới hạn 5 giờ sử dụng</span
-                    >
-                  </li>
-                  <li>
+
+                  <li class="price__item">
                     <img
                       alt="session"
                       loading="lazy"
-                      width="16"
-                      height="16"
+                      width="19"
+                      height="19"
                       decoding="async"
                       data-nimg="1"
                       class="h-4"
                       src="./assets/img/session.png"
                       style="color: transparent"
                     /><span class="heading price__content"
-                      >Giới hạn 3 giờ/phiên</span
+                      >Không giới hạn số giờ mỗi phiên</span
                     >
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="#000000"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big text-black size-[20px]"
                       aria-hidden="true"
                     >
                       <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                       <path d="m9 11 3 3L22 4"></path></svg
                     ><span class="heading price__content">Hạ tầng ổn định</span>
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="#000000"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big text-black size-[20px]"
                       aria-hidden="true"
                     >
                       <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                       <path d="m9 11 3 3L22 4"></path></svg
                     ><span class="heading price__content">Không xếp hàng</span>
                   </li>
-                  <li>
+                  <li class="price__item">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="#000000"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big text-black size-[20px]"
-                      aria-hidden="true"
-                    >
-                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                      <path d="m9 11 3 3L22 4"></path></svg
-                    ><span class="heading price__content">Ưu tiên phục vụ</span>
-                  </li>
-                  <li>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#000000"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-x text-black size-[20px]"
                       aria-hidden="true"
                     >
                       <path d="M18 6 6 18"></path>
                       <path d="m6 6 12 12"></path></svg
                     ><span class="heading price__content"
                       >Không hỗ trợ treo máy</span
-                    >
-                  </li>
-                  <li>
-                    <span class="heading price__content"
-                      >Dành riêng cho người dùng mới</span
-                    >
-                  </li>
-                  <li>
-                    <img
-                      alt="storage"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      decoding="async"
-                      data-nimg="1"
-                      src="./assets/img/storage.png"
-                      style="color: transparent"
-                    />
-                    <span class="heading price__content"
-                      >Dành riêng cho người dùng mới</span
                     >
                   </li>
                 </ul>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="banner__cta">
+        <div class="container">
+          <img
+            src="./assets/img/light.png"
+            alt=""
+            class="banner__light--left"
+          />
+          <div class="main__banner">
+            <img
+              src="./assets/img/logo_black_white.png"
+              alt=""
+              width="115"
+              height="76"
+            />
+            <h3 class="heading banner__heading">
+              Bắt đầu sử dụng Thinkmay CloudPC ngay bây giờ
+            </h3>
+            <p class="desc banner__desc">
+              Hoặc nhắn tin hỗ trợ để được trải nghiệm miễn phí
+            </p>
+            <a href="#" class="btn banner__btn">
+              <span>Sử dụng ngay bây giờ chỉ từ 59K</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <img
+            src="./assets/img/light.png"
+            alt=""
+            class="banner__light--right"
+          />
         </div>
       </section>
     </main>
