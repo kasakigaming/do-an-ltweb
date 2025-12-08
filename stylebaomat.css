@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f8f8f8 url("bg-hero.png") no-repeat center scroll;
+  background-size: cover;
+}
+
+.nav-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+  position: fixed;
+  top: 0%;
+  z-index: 999;
+}
+
+.navbar {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.09);
+  backdrop-filter: blur(10px);
+}
+.nav-center {
+  position: absolute;
+  left: 47%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.logo {
+  height: 45px;
+  object-fit: contain;
+  width: auto;
+  display: block;
+}
+
+.nav-center a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-center a:hover {
+  color: #0a8a78;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 6px 16px;
+  background: white;
+
+  border-radius: 30px;
+  border: 1px solid #e5e5e5;
+}
+
+.lang-switch img {
+  width: 20px;
+  border-radius: 50%;
+}
+
+.arrow {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.signup-btn {
+  padding: 10px 26px;
+  background: #0b8e7a;
+  border: none;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 40px;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.signup-btn:hover {
+  background: #077462;
+}
+
+.content {
+  text-align: left;
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+  padding-top: 120px;
+  text-align: left;
+  max-width: 800px;
+  margin: 0px auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-title {
+  font-size: 46px;
+  font-weight: 700;
+  color: #0f223c;
+  text-align: center;
+}
+ul {
+  padding-left: 20px;
+}
+
+.desc {
+  font-size: 18px;
+  color: #425261;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border-radius: 999px;
+  padding: 4px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.flag {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.site-footer {
+  margin-top: 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+  background-color: transparent;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+.footer-wrapper {
+  margin: 40px auto;
+  max-width: none;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.footer-brand {
+  flex: 2;
+  min-width: 280px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  height: 30px;
+  width: auto;
+}
+
+.brand-desc {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-width: 300px;
+}
+
+.brand-address {
+  color: #888;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-links h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #009688;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  padding: 25px 40px;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+}
+
+.floating-chat {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #009688;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 150, 136, 0.4);
+  transition: transform 0.3s;
+  z-index: 9999;
+}
+
+.floating-chat:hover {
+  transform: scale(1.1);
+}

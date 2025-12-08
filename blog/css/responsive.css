@@ -1,0 +1,76 @@
+/* <= 1000px: thu layout lại, bỏ sticky nếu cần */
+
+@media (max-width: 1000px) {
+  .hero-overlay {
+    padding: 16px 0 28px;
+  }
+
+  .hero-topbar {
+    padding: 0 16px;
+    margin-bottom: 24px;
+    gap: 12px;
+  }
+
+  .hero-nav {
+    display: none; /* mobile ẩn bớt menu, dùng navbar khác nếu bạn có */
+  }
+
+  .hero-content {
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .page {
+    padding: 24px 12px 40px;
+  }
+
+  .page-inner {
+    display: block;
+  }
+
+  .post {
+    margin-bottom: 20px;
+    padding: 18px 16px 22px;
+  }
+
+  .sidebar-sticky {
+    position: static; /* không sticky trên mobile cho đỡ nhảy */
+  }
+
+  .news-card,
+  .sidebar-list {
+    border-radius: 14px;
+  }
+}
+
+/* <= 600px: mobile nhỏ */
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .post-section h2 {
+    font-size: 18px;
+  }
+
+  .post-section h3 {
+    font-size: 16px;
+  }
+
+  .sidebar-post {
+    align-items: center;
+  }
+
+  .sidebar-thumb {
+    width: 64px;
+    height: 64px;
+  }
+}
