@@ -323,16 +323,12 @@ a {
 .banner__light--left {
   position: absolute;
   height: 100%;
-  top: 0px;
-  left: 242px;
   z-index: 1;
 }
 
 .banner__light--right {
   position: absolute;
   height: 100%;
-  bottom: 0px;
-  right: 242px;
   rotate: 180deg;
   z-index: 1;
 }
