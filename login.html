@@ -1,11 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login steam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Steam Header 100% (Bootstrap)</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Font Steam -->
+<link href="https://store.fastly.steamstatic.com/public/shared/fonts/motiva_sans.css" rel="stylesheet">
+
+<style>
+    /* ----- GENERAL THEME ----- */
+.steam-header {
+    background-color: #171a21;
+    height: 88px;                /* CHUẨN Steam real */
+    display: flex;
+    align-items: center;
+    padding-top: 6px;            /* Giống spacing trên Steam */
+    padding-bottom: 6px;
+}
+
+/* LOGO – hạ thấp giống Steam */
+.steam-logo img {
+    width: 176px;
+    margin-top: 4px;
+}
+
+/* MAIN NAV */
+.steam-nav .nav-link {
+    color: #b8b6b4 !important;
+    font-size: 14px;
+    padding: 0 18px;
+    line-height: 36px;           /* Đúng line-height Steam */
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.steam-nav .nav-link:hover,
+.steam-nav .nav-link.active {
+    color: #1a9fff !important;
+}
+
+/* Hover blue underline như Steam */
+.steam-nav .nav-link.active {
+    border-bottom: 2px solid #1a9fff;
+}
+
+/* RIGHT ACTION */
+#global_action_menu {
+    font-size: 12px;
+    color: #b8b6b4;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px; /* giống Steam */
+}
+
+.btn-install-steam {
+    background: #5c7e10;
+    color: white !important;
+    padding: 4px 14px;           /* CHUẨN Steam */
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 2px;
+    line-height: 20px;
+}
+
+/* Language dropdown */
+.lang-menu button {
+    padding: 0;
+    font-size: 12px;
+    margin-left: 2px;
+}
+
+
+</style>
 </head>
+
 <body>
-    
+
+<!-- HEADER -->
+<header class="steam-header">
+    <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+
+        <!-- LOGO -->
+        <div class="steam-logo">
+            <a href="https://store.steampowered.com/">
+                <img src="https://store.fastly.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016">
+            </a>
+        </div>
+
+        <!-- MAIN NAVIGATION -->
+        <ul class="nav steam-nav">
+
+            <!-- Cửa hàng -->
+            <li class="nav-item dropdown steam-submenu">
+                <a class="nav-link dropdown-toggle" href="#">Cửa hàng</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Trang chủ</a></li>
+                    <li><a class="dropdown-item" href="#">Hàng khám phá</a></li>
+                    <li><a class="dropdown-item" href="#">Danh sách ước</a></li>
+                    <li><a class="dropdown-item" href="#">Cửa hàng điểm</a></li>
+                    <li><a class="dropdown-item" href="#">Tin tức</a></li>
+                    <li><a class="dropdown-item" href="#">Thống kê</a></li>
+                </ul>
+            </li>
+
+            <!-- Cộng đồng -->
+            <li class="nav-item dropdown steam-submenu">
+                <a class="nav-link dropdown-toggle" href="#">Cộng đồng</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Trang chủ</a></li>
+                    <li><a class="dropdown-item" href="#">Thảo luận</a></li>
+                    <li><a class="dropdown-item" href="#">Workshop</a></li>
+                    <li><a class="dropdown-item" href="#">Chợ</a></li>
+                    <li><a class="dropdown-item" href="#">Phát sóng</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#">Thông tin</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Hỗ trợ</a></li>
+        </ul>
+
+        <!-- RIGHT – ACTIONS -->
+        <div id="global_action_menu">
+            <a href="#" class="btn-install-steam">Cài đặt Steam</a>
+
+            <a href="#">Đăng nhập</a>
+
+            <span>|</span>
+
+            <!-- Language -->
+            <div class="dropdown lang-menu">
+                <button class="dropdown-toggle" data-bs-toggle="dropdown">
+                    Ngôn ngữ
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="?l=schinese">简体中文</a></li>
+                    <li><a class="dropdown-item" href="?l=tchinese">繁體中文</a></li>
+                    <li><a class="dropdown-item" href="?l=japanese">日本語</a></li>
+                    <li><a class="dropdown-item" href="?l=english">English</a></li>
+                    <li><a class="dropdown-item" href="?l=vietnamese">Tiếng Việt</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" target="_blank" href="#">
+                            Báo cáo lỗi dịch thuật
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</header>
+
 </body>
 </html>
