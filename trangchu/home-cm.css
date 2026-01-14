@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+.community {
+  background-color: #f3f9f9;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f172a;
+}
+
+.cm-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.cm-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.cm-title {
+  margin-bottom: 10px;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.cm-desc {
+  color: #000c;
+}
+
+.cm-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* Card nhỏ */
+.cm-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dce7ea;
+  border-radius: 16px;
+  padding: 28px 20px;
+  height: auto;
+  min-height: 216px;
+}
+
+/* Card lớn */
+.cm-card-big {
+  display: flex;
+  flex-direction: column;
+  min-height: 454px;
+  border: 1px solid #dce7ea;
+  border-radius: 16px;
+  padding: 28px 20px;
+}
+
+/* Card xanh */
+.cm-card--accent {
+  background: linear-gradient(135deg, #0e9384, #2fa9a3);
+  color: #ffffff;
+  border: none;
+}
+
+.cm-card__text {
+  margin: 0 0 18px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Person */
+.cm-person {
+  margin-top: auto;
+}
+
+.cm-person__name {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.cm-person__role {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.cm-card--accent .cm-person__role {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Logo (img) */
+.cm-logo {
+  height: 68px;
+}
+
+/* 2 card lớn */
+.cm-card--left {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.cm-card--right {
+  grid-column: 3;
+  grid-row: 2 / span 2;
+}
+
+/* responsive cho mobile */
+@media (max-width: 768px) {
+  .cm-container {
+    padding: 40px 16px;
+  }
+
+  .cm-title {
+    font-size: 28px;
+  }
+
+  .cm-grid {
+    display: flex;
+    gap: 14px;
+
+    overflow-x: auto;
+    padding: 0 6px 12px;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cm-card,
+  .cm-card-big {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    min-height: auto;
+  }
+
+  .cm-card--left,
+  .cm-card--right {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .cm-card__text {
+    font-size: 14px;
+  }
+
+  .cm-logo {
+    height: 56px;
+  }
+}
