@@ -6,11 +6,10 @@
 }
 
 body {
-  font-family: "inter", sans-serif;
+  /* font-family: "inter", sans-serif; */
   margin: 0;
-  padding: 0;
-  color: var(--text-dark);
-  line-height: 1.6;
+  padding: 0;;
+  /* line-height: 1.6; */
 }
 .container {
   max-width: 1100px;
@@ -19,14 +18,14 @@ body {
   text-align: center;
 }
 
-.hero-section {
+ /* .hero-section {
   background: radial-gradient(circle at top, #e0f2f1 0%, #ffffff 70%);
   padding: 80px 0;
-}
+} */
 
 .main-title {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 20px;
   letter-spacing: -1px;
 }
