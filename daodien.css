@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-    background: url("../assets/background-thinkmay.png") center/cover no-repeat fixed;
+    background: url("./bg-hero.png") center/cover no-repeat fixed;
     color: #111;
 }
 
@@ -225,7 +226,7 @@ body {
     content: "▾";
 }
 
-.faq-content {
+.faq-content { 
     height: 0;
     overflow: hidden;
     transition: 0.3s;
