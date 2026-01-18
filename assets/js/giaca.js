@@ -1,26 +1,48 @@
-// Language dropdown toggle
+// Language dropdown toggle và Mobile menu
 document.addEventListener("DOMContentLoaded", () => {
-    const langBtn = document.querySelector(".header__language--btn");
-    const langContainer = document.querySelector(".header__language");
+    // ========== DESKTOP LANGUAGE DROPDOWN ==========
+    const langBtnDesktop = document.getElementById("langToggleDesktop");
+    const langDropdownDesktop = document.getElementById("langDropdownDesktop");
     
-    if (!langBtn || !langContainer) return;
+    if (langBtnDesktop && langDropdownDesktop) {
+        langBtnDesktop.addEventListener("click", (e) => {
+            e.stopPropagation();
+            langDropdownDesktop.classList.toggle("open");
+        });
+    }
 
-    // Toggle dropdown khi click button
-    langBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      langContainer.classList.toggle("is-open");
-    });
+    // ========== MOBILE LANGUAGE DROPDOWN ==========
+    const langBtnMobile = document.getElementById("langToggleMobile");
+    const langDropdownMobile = document.getElementById("langDropdownMobile");
+    
+    if (langBtnMobile && langDropdownMobile) {
+        langBtnMobile.addEventListener("click", (e) => {
+            e.stopPropagation();
+            langDropdownMobile.classList.toggle("open");
+        });
+    }
 
-    // Đóng dropdown khi click ra ngoài
+    // Đóng tất cả dropdown khi click ra ngoài
     document.addEventListener("click", () => {
-      langContainer.classList.remove("is-open");
+        if (langDropdownDesktop) langDropdownDesktop.classList.remove("open");
+        if (langDropdownMobile) langDropdownMobile.classList.remove("open");
     });
 
     // Ngăn dropdown đóng khi click vào bên trong
-    const langContent = document.querySelector(".language__content");
-    if (langContent) {
-      langContent.addEventListener("click", (e) => {
-        e.stopPropagation();
-      });
+    const langContents = document.querySelectorAll(".language__content");
+    langContents.forEach(content => {
+        content.addEventListener("click", (e) => {
+            e.stopPropagation();
+        });
+    });
+
+    // ========== HAMBURGER MENU ==========
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
+        });
     }
-  });
+});

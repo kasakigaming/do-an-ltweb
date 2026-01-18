@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <!-- style -->
     <link rel="stylesheet" href="./assets/css/giaca.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <title>Homepage</title>
   </head>
   <body>
@@ -24,6 +26,44 @@
     </div>
     <header>
       <div class="header">
+        <!-- Mobile controls -->
+        <div class="mobile-controls">
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="header__language header__language--mobile">
+            <div class="header__language--btn" id="langToggleMobile">
+              <img src="./assets/img/vietnam-icon.png" alt="" />
+              <i
+                class="fa-solid fa-chevron-down fa-xs"
+                style="color: #000000"
+              ></i>
+            </div>
+            <div class="language__content language__content--mobile" id="langDropdownMobile">
+              <a href="#" class="vn__language">
+                <span
+                  ><img src="./assets/img/vietnam-icon.png" alt="" /> Viet
+                  Nam</span
+                >
+              </a>
+              <a href="#" class="en__language"><span
+                ><img src="./assets/img/england.png" alt="" /> English</span
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="index.html">Trang Chủ</a>
+          <a href="giaca.html">Giá cả</a>
+          <a href="index.html">FAQ</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact-vn.html">Liên hệ</a>
+        </div>
+
         <!-- header right -->
         <div class="header__right">
           <a href="#" class="header__logo">
@@ -52,15 +92,15 @@
         <!-- header left -->
         <div class="header__left">
           <div class="header__cta">
-            <div class="header__language">
-              <div class="header__language--btn">
+            <div class="header__language header__language--desktop">
+              <div class="header__language--btn" id="langToggleDesktop">
                 <img src="./assets/img/vietnam-icon.png" alt="" />
                 <i
                   class="fa-solid fa-chevron-down fa-xs"
                   style="color: #000000"
                 ></i>
               </div>
-              <div class="language__content">
+              <div class="language__content language__content--desktop" id="langDropdownDesktop">
                 <a href="#" class="vn__language">
                   <span
                     ><img src="./assets/img/vietnam-icon.png" alt="" /> Viet

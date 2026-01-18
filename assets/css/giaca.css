@@ -172,7 +172,8 @@ a {
 }
 
 /* Hiển thị dropdown khi mở */
-.header__language.is-open .language__content {
+.header__language.is-open .language__content,
+.language__content.open {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
