@@ -247,13 +247,6 @@
     max-width: 100%;
   }
 
-  /* Footer - grid layout cho tablet */
-  .footer {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 30px;
-  }
-
   .footer__01 {
     width: 100%;
   }
@@ -355,13 +348,6 @@
   .navbar,
   .header__left {
     display: flex !important;
-  }
-
-  /* Price banners - giữ nguyên flex ngang */
-  .price {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
   }
 
   .price__banner {
